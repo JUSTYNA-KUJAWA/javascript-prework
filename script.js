@@ -13,6 +13,9 @@ else if (randomNumber == 2){
 else if (randomNumber == 3){
     computerMove = 'nozyczki';
 }
+else {
+    computerMove='nieznany ruch!';
+}
 printMessage('Mój ruch to: ' + computerMove);
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
@@ -29,5 +32,40 @@ else if (playerInput == '2') {
 else if (playerInput == '3') {
     playerMove = 'nozyczki';
 }
+else {
+    playerMove='nieznany ruch';
+}
 
 printMessage('Twój ruch to: ' + playerMove);
+
+if ( computerMove == 'kamień' && playerMove == 'papier') {
+    printMessage('Ty wygrywasz!');
+} else if (computerMove == 'nozyczki' && playerMove == 'papier') {
+	printMessage('Przegrywasz');
+} else if (computerMove == 'papier' && playerMove == 'papier') {
+	printMessage('Remis!');
+} else if ( computerMove == 'papier' && playerMove == 'kamień'){
+    printMessage('Przegrywasz!');
+} else if (computerMove == 'kamień' && playerMove == 'kamień') {
+    printMessage('Remis!');
+} else if (computerMove == 'nozyczki' && playerMove == 'kamień') {
+    printMessage('Przegrywasz!');
+} else if ( computerMove == 'kamień' && playerMove == 'nozyczki'){
+    printMessage('Przegrywasz!');
+} else if (computerMove == 'nozyczki' && playerMove == 'nozyczki') {
+    printMessage('Remis!');
+} else if (computerMove == 'papier' && playerMove == 'nozyczki') {
+    printMessage('Ty wygrywasz!');      
+} else if (computerMove == 'papier' && playerMove == 'nieznany ruch') {
+    printMessage('error player!'); 
+} else if (computerMove == 'kamień' && playerMove == 'nieznany ruch') {
+    printMessage('error player!'); 
+} else if (computerMove == 'nozyczki' && playerMove == 'nieznany ruch') {
+      printMessage('error player!'); 
+} else if (computerMove == 'nieznany ruch' && playerMove == 'papier') {
+    printMessage('error computer!'); 
+}else if (computerMove == 'nieznany ruch' && playerMove == 'kamień') {
+    printMessage('error computer!'); 
+}else if (computerMove == 'nieznany ruch' && playerMove == 'nozyczki') {
+    printMessage('error computer!'); 
+}
