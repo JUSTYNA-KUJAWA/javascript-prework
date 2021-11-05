@@ -27,12 +27,12 @@ printMessage('Twój ruch to: ' + playerMove);
 
 if (computerMove == playerMove) {
 	printMessage('Remis!');     
-} else if (( computerMove == 'kamień' && playerMove == 'papier') 
-          (computerMove == 'nozyczki' && playerMove == 'kamień')
+} else if (( computerMove == 'kamień' && playerMove == 'papier') || 
+          (computerMove == 'nozyczki' && playerMove == 'kamień') ||
           (computerMove == 'papier' && playerMove == 'nozyczki'))
            { printMessage('Ty wygrywasz!'); } 
-  else if (( computerMove == 'papier' && playerMove == 'kamień') 
-           (computerMove == 'kamień' && playerMove == 'nozyczki')
+  else if (( computerMove == 'papier' && playerMove == 'kamień') ||
+           (computerMove == 'kamień' && playerMove == 'nozyczki')||
            (computerMove == 'nozyczki' && playerMove == 'papier'))
             { printMessage('Przegrywasz!'); } 
-  else { printMessage('null!');}
+  else { printMessage('zagraj jeszcze raz!');}
