@@ -1,3 +1,5 @@
+//GRACZ MOVE
+
 console.log('ruch gracza to: ' + playerMove);
 randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
@@ -5,6 +7,7 @@ computerMove = getMoveName(randomNumber);
 console.log('ruch komputera to: ' + computerMove);
 displayResult(playerMove, computerMove);
 
+//COMPUTER MOVE
 function getMoveName(argMoveId) {
     console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
     if (argMoveId == 1) {
@@ -18,12 +21,14 @@ function getMoveName(argMoveId) {
         return 'nieznany ruch';
     }
   }
+
+//RESULT
 function displayResult(argPlayerMove, argComputerMove) {
     console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
     if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
       printMessage('Wygrywasz!');
     } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
-      printMessage('Wygrywasz!');
+      printMessage('Przegrywasz!');
     } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
       printMessage('Wygrywasz!');
     } else if (argPlayerMove == argComputerMove) {
